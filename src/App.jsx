@@ -17,7 +17,7 @@ const App = () => {
   // Stato per tracciare i tasti digitati per l'easter egg
   const [keyBuffer, setKeyBuffer] = useState('');
 
-  // 🧠 Funzione per aggiungere film
+  // Funzione per aggiungere film
   const handleSubmit = (event) => {
     event.preventDefault();
     if (newTitle.trim() === '') return;
@@ -32,13 +32,13 @@ const App = () => {
     setNewTitle('');
   };
 
-  // 🧠 Funzione per rimuovere film
+  // Funzione per rimuovere film
   const handleDelete = (idToDelete) => {
     const updatedMovies = movies.filter((film) => film.id !== idToDelete);
     setMovies(updatedMovies);
   };
 
-  // 🕹️ Easter Egg: attiva stile segreto scrivendo "dio"
+  // Easter Egg: attiva stile segreto scrivendo "k"
   useEffect(() => {
     const handleKey = (event) => {
       const char = event.key.toLowerCase();

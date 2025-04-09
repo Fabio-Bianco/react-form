@@ -1,12 +1,35 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎬 React Cineteca
 
-Currently, two official plugins are available:
+Un'app in React per gestire una **lista di film d'autore**, con possibilità di aggiungere o rimuovere titoli, cambiare tema grafico...  
+e un **easter egg segreto** per veri nostalgici anni '90! 😎
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Funzionalità
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✅ Aggiungi film alla lista
+- ✅ Elimina film esistenti
+- 🎨 Cambia stile grafico con 3 temi:
+  - Elegante ✨
+  - Moderno 🔵
+  - Minimal 🖤
+- 🕹️ Easter egg nascosto: scopri lo stile **"Novanta"** 👾
+
+---
+
+## ⚙️ Requisiti
+
+- Node.js
+- npm
+
+---
+
+## 📦 Installazione
+
+Clona il progetto:
+
+```bash
+git clone https://github.com/tuo-utente/react-cineteca
+cd react-cineteca
+npm install
