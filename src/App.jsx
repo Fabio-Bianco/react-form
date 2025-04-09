@@ -45,7 +45,7 @@ const App = () => {
 
       // Aggiorniamo il buffer
       setKeyBuffer((prevBuffer) => {
-        const newBuffer = (prevBuffer + char).slice(-10); // max 10 caratteri
+        const newBuffer = (prevBuffer); 
         if (newBuffer.includes('k')) {
           
           setStile('novanta');
