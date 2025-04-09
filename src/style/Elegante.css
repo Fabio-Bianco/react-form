@@ -1,0 +1,96 @@
+
+.list-movie.elegante {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Georgia', serif;
+    padding: 40px;
+  }
+  
+  .list-movie.elegante h1 {
+    color: #eab308;
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+   /* Form centrato sotto il titolo */
+   .list-movie.elegante form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 0 auto 30px auto;
+    max-width: 600px;
+    flex-wrap: wrap;
+  }
+  
+  
+  .list-movie.elegante input,
+  .list-movie.elegante button {
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  
+  .list-movie.elegante input {
+    padding: 10px;
+    background-color: #1f1f1f;
+    color: #f0f0f0;
+    border: 1px solid #444;
+    border-radius: 5px;
+  }
+  
+  .list-movie.elegante button {
+    background: none;
+    border: 1px solid #eab308;
+    color: #eab308;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .list-movie.elegante button:hover {
+    background-color: #eab308;
+    color: #121212;
+  }
+  
+  .list-movie.elegante ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 30px auto 0;
+  }
+  
+  .list-movie.elegante li {
+    background-color: #1e1e1e;
+    padding: 15px 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Bottoni stile in basso */
+  .style-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .style-buttons button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .style-buttons button:hover {
+    background-color: #eab308;
+    color: #121212;
+  }
+  

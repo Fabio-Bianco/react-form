@@ -1,0 +1,121 @@
+.list-movie.minimal {
+    background-color: #1a1a1a; /* nero soft */
+    color: #e0e0e0; /* grigio chiaro */
+    font-family: 'Arial', sans-serif;
+    padding: 50px 20px;
+    min-height: 100vh;
+  }
+  
+  /* Titolo */
+  .list-movie.minimal h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #cccccc;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+  }
+  
+  /* Form centrato sotto il titolo */
+  .list-movie.minimal form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    flex-wrap: wrap;
+  }
+  
+  /* Input */
+  .list-movie.minimal input {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #444;
+    background-color: #262626;
+    color: #e0e0e0;
+    border-radius: 4px;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .list-movie.minimal input:focus {
+    border-color: #666;
+    outline: none;
+  }
+  
+  /* Bottone submit */
+  .list-movie.minimal button[type="submit"] {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .list-movie.minimal button[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  /* Lista film */
+  .list-movie.minimal ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .list-movie.minimal li {
+    background-color: #262626;
+    border: 1px solid #333;
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Bottone Elimina */
+  .list-movie.minimal li button {
+    background-color: transparent;
+    border: 1px solid #999;
+    color: #999;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .list-movie.minimal li button:hover {
+    background-color: #999;
+    color: #1a1a1a;
+  }
+  
+  /* Bottoni stile in basso */
+  .style-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .style-buttons button {
+    background-color: #222;
+    color: #ccc;
+    border: 1px solid #555;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .style-buttons button:hover {
+    background-color: #444;
+    color: white;
+  }
+  

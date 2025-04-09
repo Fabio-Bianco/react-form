@@ -1,0 +1,124 @@
+
+.list-movie.moderno {
+    background-color: #0f172a; /* blu navy scuro */
+    color: #e2e8f0; /* grigio molto chiaro */
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Titolo */
+  .list-movie.moderno h1 {
+    color: #38bdf8; /* azzurro ciano */
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form centrato sotto il titolo */
+  .list-movie.moderno form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 0 auto 30px auto;
+    max-width: 600px;
+    flex-wrap: wrap;
+  }
+  
+  /* Input */
+  .list-movie.moderno input {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #38bdf8;
+    border-radius: 8px;
+    background-color: #1e293b;
+    color: white;
+    flex: 1;
+    min-width: 200px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .list-movie.moderno input:focus {
+    border-color: #7dd3fc;
+    outline: none;
+  }
+  
+  /* Bottone submit */
+  .list-movie.moderno button[type="submit"] {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .list-movie.moderno button[type="submit"]:hover {
+    background-color: #0ea5e9;
+    transform: scale(1.05);
+  }
+  
+  /* Lista film */
+  .list-movie.moderno ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .list-movie.moderno li {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Bottone Elimina */
+  .list-movie.moderno li button {
+    background-color: transparent;
+    border: 1px solid #f43f5e;
+    color: #f43f5e;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .list-movie.moderno li button:hover {
+    background-color: #f43f5e;
+    color: white;
+  }
+  
+  /* Bottoni stile in basso */
+  .style-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .style-buttons button {
+    background-color: #1e293b;
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .style-buttons button:hover {
+    background-color: #38bdf8;
+    color: #0f172a;
+  }
+  
