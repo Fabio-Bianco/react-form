@@ -1,7 +1,7 @@
 
 # 🎬 React Cineteca
 
-Un'app in React per gestire una **lista di film d'autore**, con possibilità di aggiungere o rimuovere titoli, cambiare tema grafico...  
+Un'app in React per gestire una lista di film d'autore, con possibilità di aggiungere o rimuovere titoli, cambiare tema grafico...  
 e un **easter egg segreto** per veri nostalgici anni '90! 😎
 
 ---

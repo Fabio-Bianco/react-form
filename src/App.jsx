@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 
 // ✅ Importiamo tutti gli stili
@@ -38,19 +39,23 @@ const App = () => {
     setMovies(updatedMovies);
   };
 
-  // Easter Egg: attiva stile segreto scrivendo "k"
+  // ✅ Easter Egg: attiva stile segreto scrivendo "k"
   useEffect(() => {
     const handleKey = (event) => {
       const char = event.key.toLowerCase();
+      console.log('Tasto premuto:', char); // 🔍 Debug
 
-      // Aggiorniamo il buffer
       setKeyBuffer((prevBuffer) => {
-        const newBuffer = (prevBuffer); 
+        const newBuffer = prevBuffer + char;
+        console.log('Buffer attuale:', newBuffer); // 🔍 Debug
+
         if (newBuffer.includes('k')) {
-          
+          console.log('🟢 Attivato stile novanta!');
           setStile('novanta');
         }
-        return newBuffer;
+
+        // Limitiamo la lunghezza del buffer per evitare che cresca all'infinito
+        return newBuffer.slice(-10); // Max 10 caratteri
       });
     };
 
