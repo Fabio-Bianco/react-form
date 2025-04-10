@@ -53,22 +53,22 @@ const App = () => {
     console.log(' Film rimosso:', filmDeleted.title);
   };
 
-  // Easter Egg: attiva stile segreto scrivendo "k"
+  // Easter Egg: attiva stile segreto scrivendo "§"
   useEffect(() => {
     const handleKey = (event) => {
-      const char = event.key.toLowerCase();
-      console.log('Tasto premuto:', char); //  Debug
+      const theme = event.key.toLowerCase();
+      console.log('Tasto premuto:', theme); //  Debug
 
-      setKeyBuffer((prevBuffer) => {
-        const newBuffer = prevBuffer + char;
-        console.log('Buffer attuale:', newBuffer); //  Debug
-
-        if (newBuffer.includes('§')) {
+      setKeyBuffer((prevTheme) => {
+        const secretTheme = prevTheme + theme;
+        console.log('Buffer attuale:', secretTheme);
+      
+        if (secretTheme.includes('§')) {
           console.log('Attivato stile novanta!');
           setStile('novanta');
         }
-
-        return; 
+      
+        return secretTheme; // 
       });
     };
 
