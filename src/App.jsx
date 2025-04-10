@@ -1,13 +1,17 @@
 
+// Importiamo React e gli hook useState e useEffect
 import { useState, useEffect } from 'react';
+// Importiamo le icone di FontAwesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash, faPlus } from '@fortawesome/free-solid-svg-icons';
+//  Importiamo tutti gli stili
 
-// ✅ Importiamo tutti gli stili
 import './style/elegante.css';
 import './style/moderno.css';
 import './style/minimal.css';
 import './style/novanta.css';
 
-// ✅ Importiamo la lista dei film
+// Importiamo la lista dei film
 import moviesData from './data/movies';
 
 const App = () => {
@@ -39,7 +43,7 @@ const App = () => {
     setMovies(updatedMovies);
   };
 
-  // ✅ Easter Egg: attiva stile segreto scrivendo "k"
+  // Easter Egg: attiva stile segreto scrivendo "k"
   useEffect(() => {
     const handleKey = (event) => {
       const char = event.key.toLowerCase();
@@ -50,7 +54,7 @@ const App = () => {
         console.log('Buffer attuale:', newBuffer); // 🔍 Debug
 
         if (newBuffer.includes('k')) {
-          console.log('🟢 Attivato stile novanta!');
+          console.log('Attivato stile novanta!');
           setStile('novanta');
         }
 
@@ -72,24 +76,30 @@ const App = () => {
           type="text"
           placeholder="Titolo del nuovo film"
           value={newTitle}
-          onChange={(e) => setNewTitle(e.target.value)}
+          onChange={(event) => setNewTitle(event.target.value)}
         />
-        <button type="submit">Aggiungi</button>
+        <button type="submit">
+  <FontAwesomeIcon icon={faPlus} />
+</button>
+
       </form>
 
       <ul>
         {movies.map((film) => (
           <li key={film.id}>
             {film.title}
-            <button onClick={() => handleDelete(film.id)}>Elimina</button>
+            <button onClick={() => handleDelete(film.id)}>
+  <FontAwesomeIcon icon={faTrash} />
+</button>
+
           </li>
         ))}
       </ul>
 
       <div className="style-buttons">
-        <button onClick={() => setStile('elegante')}>Elegante</button>
-        <button onClick={() => setStile('moderno')}>Moderno</button>
-        <button onClick={() => setStile('minimal')}>Minimal</button>
+        <button onClick={() => setStile('elegante')}>d'assai</button>
+        <button onClick={() => setStile('moderno')}>modern</button>
+        <button onClick={() => setStile('minimal')}>minimal</button>
       </div>
     </div>
   );
