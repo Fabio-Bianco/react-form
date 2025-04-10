@@ -1,3 +1,7 @@
+body {
+  background-color: #121212;
+  height: 100vh;
+}
 
 .list-movie.elegante {
     background-color: #121212;
@@ -33,7 +37,7 @@
   
   .list-movie.elegante input {
     padding: 10px;
-    background-color: #1f1f1f;
+    
     color: #f0f0f0;
     border: 1px solid #444;
     border-radius: 5px;

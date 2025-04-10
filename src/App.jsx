@@ -27,48 +27,58 @@ const App = () => {
     event.preventDefault();
     if (newTitle.trim() === '') return;
 
+
+
+    const NewId = Date.now(); // Genera un ID unico basato sul timestamp
+
+    console.log('Nuovo film aggiunto:', newTitle); //  Debug
+
     const newMovie = {
-      id: Date.now(),
+      id: NewId,
       title: newTitle,
-      description: ''
+      description: '',
+
+
     };
 
-    setMovies([...movies, newMovie]);
-    setNewTitle('');
+    setMovies([...movies, newMovie]); // Aggiungi il nuovo film alla lista  
+    setNewTitle(''); // Pulisci il campo di input
   };
 
   // Funzione per rimuovere film
   const handleDelete = (idToDelete) => {
+    const filmDeleted = movies.find((film) => film.id === idToDelete);
     const updatedMovies = movies.filter((film) => film.id !== idToDelete);
-    setMovies(updatedMovies);
+    setMovies(updatedMovies); // Aggiorna la lista dei film
+    console.log(' Film rimosso:', filmDeleted.title);
   };
 
   // Easter Egg: attiva stile segreto scrivendo "k"
   useEffect(() => {
     const handleKey = (event) => {
       const char = event.key.toLowerCase();
-      console.log('Tasto premuto:', char); // 🔍 Debug
+      console.log('Tasto premuto:', char); //  Debug
 
       setKeyBuffer((prevBuffer) => {
         const newBuffer = prevBuffer + char;
-        console.log('Buffer attuale:', newBuffer); // 🔍 Debug
+        console.log('Buffer attuale:', newBuffer); //  Debug
 
-        if (newBuffer.includes('k')) {
+        if (newBuffer.includes('§')) {
           console.log('Attivato stile novanta!');
           setStile('novanta');
         }
 
-        // Limitiamo la lunghezza del buffer per evitare che cresca all'infinito
-        return newBuffer.slice(-10); // Max 10 caratteri
+        return; 
       });
     };
 
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
+    addEventListener('keydown', handleKey);
+    return () => removeEventListener('keydown', handleKey);
   }, []);
 
   return (
     <div className={`list-movie ${stile}`}>
+
       <h1>Film d'autore 🎬</h1>
 
       <form onSubmit={handleSubmit}>
@@ -79,8 +89,8 @@ const App = () => {
           onChange={(event) => setNewTitle(event.target.value)}
         />
         <button type="submit">
-  <FontAwesomeIcon icon={faPlus} />
-</button>
+          <FontAwesomeIcon icon={faPlus} />
+        </button>
 
       </form>
 
@@ -89,8 +99,8 @@ const App = () => {
           <li key={film.id}>
             {film.title}
             <button onClick={() => handleDelete(film.id)}>
-  <FontAwesomeIcon icon={faTrash} />
-</button>
+              <FontAwesomeIcon icon={faTrash} />
+            </button>
 
           </li>
         ))}
